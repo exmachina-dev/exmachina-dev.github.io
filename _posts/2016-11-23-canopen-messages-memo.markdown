@@ -4,6 +4,7 @@ title:  "Memo for CANopen messages"
 author: "WillyKaze"
 date:   2016-11-23 16:24:31 +0100
 thumbnail: sticky-note
+categories: Memo
 tags: CANopen protocol
 ---
 This is a quick memo for CANopen message types.

@@ -4,6 +4,7 @@ title:  "LPC1768 development toolkit"
 author: "WillyKaze"
 date:   2016-12-08 12:16:25 +0100
 thumbnail: microchip
+categories: Tutorial
 tags: LPC1768 mbed
 ---
 This is a quick tutorial to install the basic toolkit required for compiling and debugging the LPC1768 using [mbed-os][mbed-os].
