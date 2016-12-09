@@ -94,8 +94,10 @@ layout: default
         {% if page.tags and page.tags.size > 0 %}
         <div class="tags">
           <small>
-          <i class="fa fa-tags"></i>
-            {{ page.tags | join: ', ' }}
+            {% for tag in page.tags %}
+            {% if forloop.index != 1 %},{% endif %}
+            <i class="fa fa-tags"></i> {{ tag }}
+            {% endfor %}
           </small>
         </div>
         {% endif %}
