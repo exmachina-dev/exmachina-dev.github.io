@@ -103,13 +103,13 @@ $ mbed toolchair GCC_ARM
 Once your repo is setup, you can start coding. Here is a quick example to check everything is working:
 
 ```cpp
-/* Copyright 2012 Adam Green (http://mbed.org/users/AdamGreen/)
+/* Copyright 2016 Benoit Rapidel
 
-   Licensed under the Apache License, Version 2.0 (the "License");
+   Licensed under the MIT License (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+        MIT
 
    Unless required by applicable law or agreed to in writing, software
    distributed under the License is distributed on an "AS IS" BASIS,
@@ -120,21 +120,33 @@ Once your repo is setup, you can start coding. Here is a quick example to check 
 
 /* Blink LED without using the mbed library. */
 
-#include "LPC17xx.h"
+#include "mbed.h"
 
-volatile int g_LoopDummy;
+DigitalOut led1(LED1);
+DigitalOut led2(LED2);
+DigitalOut led3(LED3);
+DigitalOut led4(LED4);
 
 int main() 
 {
-    LPC_GPIO1->FIODIR |= 1 << 18; // P1.18 connected to LED1
+    int i;
+
     while(1)
     {
-        int i;
+        if (i % 1 == 0)
+            led1 = !led1;
+
+        if (i % 2 == 0)
+            led2 = !led2;
+
+        if (i % 4 == 0)
+            led3 = !led3;
+
+        if (i % 8 == 0)
+            led4 = !led4;
         
-        LPC_GPIO1->FIOPIN ^= 1 << 18; // Toggle P1.18
-        for (i = 0 ; i < 5000000 && !g_LoopDummy ; i++)
-        {
-        }
+        i = i + 1;
+        Thread::wait(50);
     }
     return 0;
 }
