@@ -22,8 +22,8 @@ url: "http://devblog.exmachina.fr" # the base hostname & protocol for your site,
 title_description: >
   The development blog by ExMachina team.
 title_image: "/img/ExMachina_300.png"
-footer_left: Test
-footer_right: Blah
+footer_left: Served by <a href="http://jekyllrb.com">Jekyll</a>
+footer_right: Copyright ExMachina 2016
 
 # Social usernames
 twitter_username: exmachina_sas
