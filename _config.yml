@@ -13,20 +13,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ExMachina Development blog
+title: ExMachina Dev Blog
 email: devblog@exmachina.fr
 description: > # this means to ignore newlines until "baseurl:"
   This is a development blog of ExMachina dev-team
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://devblog.exmachina.fr" # the base hostname & protocol for your site, e.g. http://example.com
+title_description: >
+  The development blog by ExMachina team.
+title_image: "/img/ExMachina_300.png"
+footer_left: Test
+footer_right: Blah
+
+# Social usernames
 twitter_username: exmachina_sas
 github_username:  exmachina-dev
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 gems:
   - jekyll-feed
 exclude:
   - Gemfile
   - Gemfile.lock
+
+permalink: pretty
