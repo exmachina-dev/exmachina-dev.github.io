@@ -48,7 +48,7 @@ body {
 	font-weight: 300;
 	background-color: $dark;
 	color: $white;
-	font-size: 14px;
+	font-size: 16px;
 	height: 100%;
 	width: 100%
 }
@@ -263,12 +263,12 @@ ul {
 		font-size: 30px;
 
 		@media (min-width: $screen-sm-min) {
-			font-size: 52px;
+			font-size: 42px;
 			margin-top: 0px;
 		}
 
 		@media (min-width: $screen-md-min) {
-			font-size: 60px;
+			font-size: 54px;
 			margin-top: -20px;
 		}
 	}
@@ -451,12 +451,15 @@ ul {
 		margin-bottom: 10px;
 	}
 
+	h1 {
+		font-size: 42px;
+	}
 	h2 {
-		font-size: 36px;
+		font-size: 32px;
 	}
 
 	h3 {
-		font-size: 28px;
+		font-size: 26px;
 	}
 
 	p {
@@ -567,13 +570,17 @@ ul {
 			padding-top: 10px;
 			padding-bottom: 10px;
 
-			@media (min-width: $screen-sm-min) {
-				font-size: 24px;
-				padding-left: 30px;
-				padding-right: 30px;
-				padding-top: 40px;
-				padding-bottom: 20px;
-			}
+                        @media (min-width: $screen-sm-min) {
+                            font-size: 18px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            padding-top: 40px;
+                            padding-bottom: 20px;
+                        }
+
+                        h1 {
+                            font-size: 38px;
+                        }
 
 			.series {
 				margin-bottom: 50px;
