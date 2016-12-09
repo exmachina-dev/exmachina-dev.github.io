@@ -28,6 +28,7 @@ footer_right: Copyright ExMachina 2016
 # Social usernames
 twitter_username: exmachina_sas
 github_username:  exmachina-dev
+google_analytics: UA-61961471-2
 
 # Build settings
 markdown: kramdown
