@@ -19,7 +19,7 @@ $rss:            #eea33a;
 $darker:         #152732;
 $dark:           #262E38;
 $medium:         #353c45;
-$light-medium:   #969696;
+$light-medium:   #858C95;
 $dark-hl:        #3e4c5b;
 $light-hl:       #87D050;
 $green:          #92C7A3;
@@ -578,6 +578,10 @@ ul {
                             padding-bottom: 20px;
                         }
 
+                        h1, h2, h3, h4, h5, h6 {
+                            color: $light-medium;
+                        }
+
                         h1 {
                             font-size: 38px;
                         }
@@ -891,18 +895,18 @@ ul {
 }
 
 table{
-    margin: 0 auto;
+    margin: 1em 0;
     border-collapse: collapse;
     border-spacing: 0;
-    border:2px solid $darker;;
+    border: 1px solid $light-medium;
 }
 
 th{
-    padding: 2px;
-    border:2px solid $darker;;
+    padding: .1em .25em;
+    border: 1px solid $light-medium;
 }
 
 td{
-    padding: 2px;
-    border:1px solid $dark-hl;;
+    padding: .1em .25em;
+    border: 1px solid $light-medium;
 }
