@@ -1,0 +1,130 @@
+---
+---
+/* Piperita - Theme */
+/* by Jacob Tomlinson () */
+
+/* Colours */
+$hi-normal:         #e3e0d7;
+$hi-title:          #ffffd7;
+$hi-lineno:         #857b6f;
+$hi-specialkey:     #626262;
+$hi-warningmsg:     #ff5f55;
+$hi-errormsg:       #ff2026;
+$hi-keyword:        #88b8f6;
+$hi-statement:      #88b8f6;
+$hi-constant:       #e5786d;
+$hi-number:         #e5786d;
+$hi-preproc:        #e5786d;
+$hi-function:       #cae982;
+$hi-identifier:     #cae982;
+$hi-type:           #d4d987;
+$hi-special:        #eadead;
+$hi-string:         #95e454;
+$hi-comment:        #9c998e;
+$hi-todo:           #857b6f;
+
+
+/* Piperita Dark Title */
+.lineno .hljs-number {
+  color: $hi-lineno;
+}
+
+.hljs-title {
+  color: $hi-title;
+}
+
+/* Piperita Dark Green */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: $hi-identifier;
+}
+
+/* Piperita Dark Orange */
+.hljs-number {
+  color: $hi-number;
+}
+
+.hljs-doctag {
+  color: $hi-todo;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword {
+
+  color: $hi-preproc;
+}
+
+.hljs-pragma,
+.hljs-literal,
+.hljs-params {
+  color: $hi-special;
+}
+
+.hljs-constant {
+  color: $hi-constant;
+}
+
+/* Piperita Dark Red */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: $hi-string;
+}
+
+/* Piperita Dark Aqua */
+.css .hljs-hexcolor {
+  color: $hi-number;
+}
+
+.hljs-comment {
+  color: $hi-comment;
+}
+
+/* Piperita Dark Blue */
+.hljs-function,
+.hljs-built_in,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: $hi-function;
+}
+
+/* Piperita Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: $hi-keyword;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  color: $hi-normal;
+  -webkit-text-size-adjust: none;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
