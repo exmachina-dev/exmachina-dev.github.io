@@ -98,7 +98,7 @@ If this is a new repo, you may have to specify the target and the tool chain:
 
 ```sh
 $ mbed target LPC1768
-$ mbed toolchair GCC_ARM
+$ mbed toolchain GCC_ARM
 ```
 
 Once your repo is setup, you can start coding. Here is a quick example to check everything is working:
