@@ -77,7 +77,7 @@ $ cd PROGRAM_PATH
 $ mbed new .
 ```
 
-These command will initialize a git repository (if necessary), create some configuration files and clone a copy of mbed-os repository.
+These command will initialize a git repository (if necessary), create some configuration files and clone the mbed-os repository.
 You can choose which version you want by going in the mbed-os directory and checkout the desirated branch or tag:
 
 ```shell
@@ -95,6 +95,7 @@ For more information see the excellent [book about Git](https://git-scm.com/book
 ## Compiling
 
 If this is a new repo, you may have to specify the target and the tool chain:
+
 ```sh
 $ mbed target LPC1768
 $ mbed toolchair GCC_ARM
