@@ -103,7 +103,7 @@ $ mbed toolchair GCC_ARM
 
 Once your repo is setup, you can start coding. Here is a quick example to check everything is working:
 
-```cpp
+{% highlight cpp linenos %}
 /* Copyright 2016 Benoit Rapidel
 
    Licensed under the MIT License (the "License");
@@ -128,7 +128,7 @@ DigitalOut led2(LED2);
 DigitalOut led3(LED3);
 DigitalOut led4(LED4);
 
-int main() 
+int main()
 {
     int i;
 
@@ -145,17 +145,17 @@ int main()
 
         if (i % 8 == 0)
             led4 = !led4;
-        
+
         i = i + 1;
         Thread::wait(50);
     }
     return 0;
 }
-```
+{% endhighlight %}
 
-Save it to main.cpp and compile it:
+Save it to `main.cpp` and compile it:
 
-```bash
+```sh
 $ mbed compile
 $ mbed compile --color    # For color output
 $ mbed compile -v         # Verbose output
