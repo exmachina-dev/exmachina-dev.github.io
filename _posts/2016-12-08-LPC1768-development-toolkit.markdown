@@ -96,7 +96,7 @@ For more information see the excellent [book about Git](https://git-scm.com/book
 
 If this is a new repo, you may have to specify the target and the tool chain:
 
-```sh
+```shell
 $ mbed target LPC1768
 $ mbed toolchain GCC_ARM
 ```
@@ -155,7 +155,7 @@ int main()
 
 Save it to `main.cpp` and compile it:
 
-```sh
+```shell
 $ mbed compile
 $ mbed compile --color    # For color output
 $ mbed compile -v         # Verbose output
