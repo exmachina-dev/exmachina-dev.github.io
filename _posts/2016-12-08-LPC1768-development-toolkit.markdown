@@ -119,7 +119,7 @@ Once your repo is setup, you can start coding. Here is a quick example to check 
    limitations under the License.
 */
 
-/* Blink LED without using the mbed library. */
+/* Blink LED using the mbed library. */
 
 #include "mbed.h"
 
