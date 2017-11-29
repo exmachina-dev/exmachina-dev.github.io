@@ -79,10 +79,11 @@ SDO messages are available in pre-operationnal and operationnal modes.
 
 | COB-ID     | Data bytes                        | Description           |
 |:-----------|:----------------------------------|:----------------------|
-|`600h + $ID`|`40h $O_LSB $O_MSB $SubIndex 4x00h`|SDO client read command|
-|`580h + $ID`|`$RP $O_LSB $O_MSB $SubIndex 4x$DB`|SDO server reply       |
+|`600h + $ID`|`40h $OLSB $OMSB $SI 4x00h`|SDO client read command|
+|`580h + $ID`|`$RP $OLSB $OMSB $SI 4x$DB`|SDO server reply       |
 
-`$O_LSB` and `$O_MSB` are the object index Less Significant Byte and Most Significant Byte
+`$OLSB` and `$OMSB` are the object index LSB and MSB.
+`$SI` is the subindex.
 
 `$RP` is the response code indicating either the data length or the error code:
 
@@ -94,14 +95,49 @@ SDO messages are available in pre-operationnal and operationnal modes.
 
 ## More than 4 bytes to transmit
 
-| COB-ID     | Data bytes                       | Description           |
-|:-----------|:---------------------------------|:----------------------|
-|`600h + $ID`|`40h $OBJindex(2) $SubIndex 4x00h`|SDO client read command|
-|`580h + $ID`|`$RP $ID`                         |SDO server reply       |
+| COB-ID     | Data bytes                |        Description           |
+|:-----------|:--------------------------|:-----------------------------|
+|`600h + $ID`|`40h $OLSB $OMSB $SI 4x00h`|SDO client read command       |
+|`580h + $ID`|`$RP $OLSB $OMSB $SI $DL`  |SDO server data length reply  |
+|`600h + $ID`|`60h 7x00h`                |SDO client ready reply        |
+|`580h + $ID`|`$RP 7x$DB`                |SDO server data reply         |
 
 ## Error codes for SDO access
 
 | Error code | Description           |
 |:-----------|:----------------------|
-|`60h`       |ERROR|
-|`60h`       |ERROR|
+|`0503 0000h`| Toggle bit not alternated |
+|`0504 0000h`| SDO protocol timed out |
+|`0504 0001h`| Command specifier not valid |
+|`0504 0002h`| Invalid block size (block mode only, see DS301) |
+|`0504 0003h`| Invalid sequence number (block mode only, see DS301) |
+|`0504 0004h`| CRC error (block mode only, see DS301) |
+|`0504 0005h`| Out of memory |
+|`0601 0000h`| Unsupported access to an object |
+|`0601 0001h`| Attempt to read a write only object |
+|`0601 0002h`| Attempt to write a read only object |
+|`0602 0000h`| Object does not exist in the object dictionary |
+|`0604 0041h`| Object cannot be mapped to the PDO |
+|`0604 0042h`| The number and length of the objects to be mapped would exceed PDO length |
+|`0604 0043h`| General parameter incompatibility reason |
+|`0604 0047h`| General internal incompatibility in the device |
+|`0606 0000h`| Access failed due to a hardware error |
+|`0607 0010h`| Data type does not match, length of service parameter does not match |
+|`0607 0012h`| Data type does not match, length of service parameter too high |
+|`0607 0013h`| Data type does not match, length of service parameter too low |
+|`0609 0011h`| Sub-index does not exist |
+|`0609 0030h`| Value range of parameter exceeded (only for write access) |
+|`0609 0031h`| Value of parameter written too high |
+|`0609 0032h`| Value of parameter written too low |
+|`0609 0036h`| Maximum value is less than minimum value |
+|`0800 0000h`| General error |
+|`0800 0020h`| Data cannot be transferre d or stored to the application  |
+|`0800 0021h`| Data cannot be transferred or stored to the application because of local control |
+|`0800 0022h`| Data cannot be transferred or stored to the application because of present device state |
+|`0800 0023h`| Object dictionary dynamic generation fails or no ob ject dictionary is present (object dictionary loads from file and file error occurred) |
+
+# Resources
+
+Here some useful resources:
+
+[http://www.a-m-c.com/download/sw/dw300_3-0-3/CAN_Manual300_3-0-3.pdf]()
