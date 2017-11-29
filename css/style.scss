@@ -22,6 +22,7 @@ $medium:         #343f4d;
 $light-medium:   #9dabbd;
 $dark-hl:        #3e4c5b;
 $light-hl:       #87D050;
+$lighter-hl:     #a7f070;
 $green:          #92C7A3;
 $light:          #DFECE6;
 $white:          #FFFFFF;
@@ -59,7 +60,7 @@ a, a:active {
 }
 
 a:hover {
-  color: $dark-hl;
+  color: $lighter-hl;
   text-decoration: none;
 }
 
@@ -688,10 +689,21 @@ ul {
           table, table td {
             border: 0px;
             margin: 0px;
+            padding: 0px;
           }
 
           table td.gutter {
-            min-width: 2em;
+            min-width: 40px;
+            width: 40px;
+            padding-right: 5px;
+
+            @media (min-width: $screen-sm-min) {
+              margin-left: -30px;
+            }
+          }
+
+          code.hljs[data-lang] {
+            margin-left: -40px;
           }
 
           pre {
