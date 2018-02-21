@@ -15,7 +15,7 @@ This is a quick tutorial to install the basic toolkit required for compiling and
   Be sure to select Python 2.7 release, mbed-cli is not compatibly with Python 3
 * [Git](https://git-scm.com/downloads/)  
   On Windows, add git to your `PATH`
-* A ARM Toolchain – we use [GNU ARM Embedded Toolchain](https://launchpad.net/gcc-arm-embedded)
+* A ARM Toolchain – we use [GNU ARM Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads)
 * Mercurial is optional, only install if you use hg repositories.
 
 
